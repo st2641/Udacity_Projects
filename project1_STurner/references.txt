@@ -1,0 +1,5 @@
+http://www.w3schools.com/css/
+http://stackoverflow.com/questions/25003840/using-css-add-a-subtitle-below-a-title
+http://css-tricks.com/snippets/css/font-shorthand/
+http://www.w3schools.com/html/html5_semantic_elements.asp
+http://www.w3schools.com/html/html_responsive.asp
