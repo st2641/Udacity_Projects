@@ -1,0 +1,23 @@
+﻿Committing readme
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	new file:   ea55vryt.oyk.txt
+#
+# Changes not staged for commit:
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/README.md
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/css/style.css
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/images/197x148.gif
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/images/fry.jpg
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/index.html
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/helper.js
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/jQuery.js
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/resumeBuilder.js
+#	deleted:    project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/references.txt
+#
+

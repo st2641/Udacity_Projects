@@ -1,0 +1,22 @@
+﻿Fixed CSS classes by removing white space and redundancy that is handled by inheritance. 3/19/2015 
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#	modified:   css/main.css
+#	modified:   index.html
+#	modified:   ../project2_STurner/frontend-nanodegree-resume-master/css/style.css
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/README.md
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/css/style.css
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/images/197x148.gif
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/images/fry.jpg
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/index.html
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/helper.js
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/jQuery.js
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/js/resumeBuilder.js
+#	deleted:    ../project2_STurner/frontend-nanodegree-resume-master/frontend-nanodegree-resume-master/references.txt
+#	modified:   ../project2_STurner/frontend-nanodegree-resume-master/index.html
+#	modified:   ../project2_STurner/frontend-nanodegree-resume-master/js/resumeBuilder.js
+#	modified:   ../project2_STurner/frontend-nanodegree-resume-master/references.txt
+#
+
