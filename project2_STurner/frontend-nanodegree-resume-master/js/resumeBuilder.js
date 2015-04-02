@@ -2,11 +2,11 @@ var bio = {
 	"name" : "Shaun D. Turner",
 	"role" : "Application Administrator",
 	"contacts" : {
-	"office": "734-738-2641",
-	"mobile" :  "616-951-2138",
-	"email": "shaun.cell74@gmail.com",
-	"location": "White Lake, MI",
-	"github": "st2641"
+		"office": "734-738-2641",
+		"mobile" :  "616-951-2138",
+		"email": "shaun.cell74@gmail.com",
+		"location": "White Lake, MI",
+		"github": "st2641"
 	},
 	"pic": "images/fry.jpg",
 	"welcomeMessage":  "Welcome to my interactive resume",
@@ -191,8 +191,9 @@ var work = {
 		education.displayOnline();
 		work.printJobs();
 		workProjects.display();
+
 		
-	$(document).click(function(loc){
+/* 	$(document).click(function(loc){
 	
 	var x = loc.pageX;
 	var y = loc.pageY;
@@ -206,7 +207,7 @@ function inName (){
 	return _nameArray[0]  + " " + _nameArray[1] + " " + _nameArray[2] ;
 }
 
-$("#main").append(internationalizeButton);
+$("#main").append(internationalizeButton); */
 
 $("#mapDiv").append(googleMap);
 	
