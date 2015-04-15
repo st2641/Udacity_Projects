@@ -45,14 +45,16 @@ var education = {
 		"location": "Phoenix, AZ, US",
 		"degree": "Bachelors of Science",
 		"major": "Information Technology",
-		"dates": "September 2007 - May 2010"
+		"dates": "September 2007 - May 2010",
+		"url": "www.phoenix.edu/"
 		},
 		{
 		"name": "Wayne State University",
 		"location": "Detroit, MI, US",
-		"degree": "",
+		"degree": "N/A",
 		"major": "Criminal Justice",
-		"dates": "September 1997 - May 1999"
+		"dates": "September 1997 - May 1999",
+		"url": "https://wayne.edu/"
 		}
 	],
 	"onlineCourses": [
@@ -66,7 +68,7 @@ var education = {
 		"title": "Angular JS",
 		"school": "Code School",
 		"dates":"March 2015 - Present",
-		"url": "http://campus.codeschool.com/"
+		"url": "http://campus.codeschool.com/courses/shaping-up-with-angular-js/level/2/section/1/display-all-thumbnails"
 		}
 	],
 	"displaySchools": function() {
@@ -79,11 +81,12 @@ var education = {
 				var formattedDate =  HTMLschoolDates.replace("%data%",education.schools[inst].dates);
 				var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[inst].location);
 				var formattedMajor =  HTMLschoolMajor.replace("%data%",education.schools[inst].major);
-				$(".education-entry:last").append(formattedTitle);
+				var formattedTitleDegree =  formattedTitle +  formattedDegree;
+				$(".education-entry:last").append(formattedTitleDegree);
 				$(".education-entry:last").append(formattedDate);
-				$(".education-entry:last").append(formattedDegree);  
 				$(".education-entry:last").append(formattedLocation);
 				$(".education-entry:last").append(formattedMajor);
+				$(".education-entry:last a").attr("href",education.schools[inst].url);
 			}//Ends education.schools for();
 		}//Ends education.schools if();
 	},
@@ -97,10 +100,11 @@ var education = {
 				var formattedonlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[crse].school);
 				var formattedonlineDate = HTMLonlineDates.replace("%data%",education.onlineCourses[crse].dates);
 				var formattedonlineURL = HTMLonlineURL.replace("%data%",education.onlineCourses[crse].url);
-				$(".education-entry:last").append(formattedonlineTitle);
-				$(".education-entry:last").append(formattedonlineSchool);
+				var formattedonlineTitleSchool = formattedonlineTitle + formattedonlineSchool;
+				$(".education-entry:last").append(formattedonlineTitleSchool);
 				$(".education-entry:last").append(formattedonlineDate);
 				$(".education-entry:last").append(formattedonlineURL);
+				$(".education-entry:last a").attr("href",education.onlineCourses[crse].url);
 			}//Ends for();
 		}//Ends if());
 	}//Ends displayOnline();
@@ -113,21 +117,24 @@ var work = {
 		"title": "Senior Specialist",
 		"datesWorked": "July 16, 2012 - Present",
 		"location": "Plymouth, MI",
-		"description": "As a Senior Specialist in Application Production Support I have been tasked with the administration and support of an Enterprise Billing Web Application. Ensuring flawless service and custom billing solutions to AT&T's customers is the focus of my team."
+		"description": "As a Senior Specialist in Application Production Support I have been tasked with the administration and support of an Enterprise Billing Web Application. Ensuring flawless service and custom billing solutions to AT&T's customers is the focus of my team.",
+		"url": "http://www.att.com/gen/investor-relations?pid=5711"
 		},
 		{
 		"employer": "AT&T",
 		"title": "Senior Specialist",
 		"datesWorked": "November 3, 2010 - July 16, 2012",
 		"location": "Kansas City, MO",
-		"description": "As a Senior Specialist in Advanced Technical Support I was responsible for performing surveillance and maintenance on multiple network platforms. Our focus was to ensure the reliability of the 4ESS adjunct facilities and perform root cause investigations on service interruptions 24 hours a day, seven days a week."
+		"description": "As a Senior Specialist in Advanced Technical Support I was responsible for performing surveillance and maintenance on multiple network platforms. Our focus was to ensure the reliability of the 4ESS adjunct facilities and perform root cause investigations on service interruptions 24 hours a day, seven days a week.",
+		"url": "http://www.att.com/gen/investor-relations?pid=5711"
 		},
 		{
 		"employer": "AT&T",
 		"title": "Customer Service Specialist",
 		"datesWorked": "September 10, 2001 - November 3, 2010",
 		"location": "Royal Oak, MI; Comstock Park, MI; Greenville, MI",
-		"description": "As a Customer Service Specialist I was responsible for installing and repairing network elements from the central office to the customer premise. My team worked directly with business and residential customers to ensure flawless service and reliability."
+		"description": "As a Customer Service Specialist I was responsible for installing and repairing network elements from the central office to the customer premise. My team worked directly with business and residential customers to ensure flawless service and reliability.",
+		"url": "http://www.att.com/gen/investor-relations?pid=5711"
 		}
 	],
 	"printJobs": function (){
@@ -140,6 +147,7 @@ var work = {
 					var formattedTitle= HTMLworkTitle.replace("%data%", work.jobs[pos].title);
 					var formattedEmployerTitle = formattedEmployer + formattedTitle;
 					$(".work-entry:last").append(formattedEmployerTitle);
+					$(".work-entry:last a").attr("href", work.jobs[pos].url);
 					
 					var formattedDates = HTMLworkDates.replace("%data%", work.jobs[pos].datesWorked);
 					var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[pos].location);
@@ -151,7 +159,6 @@ var work = {
 	}//Ends printJobs())
 };//Ends jobs object
 	
-
 	var workProjects = {
 		"project": [
 			{
@@ -183,8 +190,6 @@ var work = {
 		}//Ends display();
 	};//Ends workProjects
 	
-	
-
 // MAIN//
 		bio.printData();
 		education.displaySchools();
@@ -192,8 +197,8 @@ var work = {
 		work.printJobs();
 		workProjects.display();
 
-		
-/* 	$(document).click(function(loc){
+//------------Creates the internationalize button on the bottom of the web page.------------//
+	$(document).click(function(loc){
 	
 	var x = loc.pageX;
 	var y = loc.pageY;
@@ -207,8 +212,7 @@ function inName (){
 	return _nameArray[0]  + " " + _nameArray[1] + " " + _nameArray[2] ;
 }
 
-$("#main").append(internationalizeButton); */
-
+$("#main").append(internationalizeButton);
 $("#mapDiv").append(googleMap);
 	
 	
