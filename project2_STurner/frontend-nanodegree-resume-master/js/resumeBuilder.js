@@ -29,7 +29,7 @@ var bio = {
 
 		if (bio.Skills.length > 0){//Evaluate bio.Skills and find out if the array is populated, print if true
 			$("#header").append(HTMLskillsStart);
-		
+			
 			for (item in bio.Skills){
 				var formattedSkills = HTMLskills.replace("%data%",bio.Skills[item]);
 				$("#skills").append(formattedSkills);	
@@ -67,7 +67,7 @@ var education = {
 		{
 		"title": "Angular JS",
 		"school": "Code School",
-		"dates":"March 2015 - Present",
+		"dates": "March 2015 - Present",
 		"url": "http://campus.codeschool.com/courses/shaping-up-with-angular-js/level/2/section/1/display-all-thumbnails"
 		}
 	],
@@ -89,7 +89,7 @@ var education = {
 				$(".education-entry:last a").attr("href",education.schools[inst].url);
 			}//Ends education.schools for();
 		}//Ends education.schools if();
-	},
+	},//Ends displaySchools();//)
 	"displayOnline": function(){
 		if (education.onlineCourses.length > 0){
 			$("#education").append(HTMLonlineClasses);
@@ -141,19 +141,19 @@ var work = {
 		if (work.jobs.length > 0){
 			
 			for (pos in work.jobs){
-					$("#workExperience").append(HTMLworkStart);
-					
-					var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[pos].employer);
-					var formattedTitle= HTMLworkTitle.replace("%data%", work.jobs[pos].title);
-					var formattedEmployerTitle = formattedEmployer + formattedTitle;
-					$(".work-entry:last").append(formattedEmployerTitle);
-					$(".work-entry:last a").attr("href", work.jobs[pos].url);
-					
-					var formattedDates = HTMLworkDates.replace("%data%", work.jobs[pos].datesWorked);
-					var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[pos].location);
-					var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[pos].description); 
-					$(".work-entry:last").append(formattedDates);
-					$(".work-entry:last").append(formattedDescription);	
+				$("#workExperience").append(HTMLworkStart);
+				
+				var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[pos].employer);
+				var formattedTitle= HTMLworkTitle.replace("%data%", work.jobs[pos].title);
+				var formattedEmployerTitle = formattedEmployer + formattedTitle;
+				$(".work-entry:last").append(formattedEmployerTitle);
+				$(".work-entry:last a").attr("href", work.jobs[pos].url);
+				
+				var formattedDates = HTMLworkDates.replace("%data%", work.jobs[pos].datesWorked);
+				var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[pos].location);
+				var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[pos].description); 
+				$(".work-entry:last").append(formattedDates);
+				$(".work-entry:last").append(formattedDescription);	
 			}//Ends for();
 		}//ends if();
 	}//Ends printJobs())
@@ -191,30 +191,30 @@ var work = {
 	};//Ends workProjects
 	
 // MAIN//
-		bio.printData();
-		education.displaySchools();
-		education.displayOnline();
-		work.printJobs();
-		workProjects.display();
-
-//------------Creates the internationalize button on the bottom of the web page.------------//
-	$(document).click(function(loc){
+bio.printData();
+education.displaySchools();
+education.displayOnline();
+work.printJobs();
+workProjects.display();
 	
+//Logs click locations wherever the user clicks//
+$(document).click(function(loc){
 	var x = loc.pageX;
 	var y = loc.pageY;
 	
 	logClicks(x,y);
-	});
+});
+	
+//Creates the internationalize button on the bottom of the web page//
 function inName (){
 	var _nameArray = bio.name.split(" ");
 	_nameArray[0] .slice(0,1).toUpperCase + _nameArray[0] .slice(1).toLowerCase();
 	_nameArray[2] = _nameArray[2].toUpperCase();
 	return _nameArray[0]  + " " + _nameArray[1] + " " + _nameArray[2] ;
 }
-
+//Adds the internationalize button to the bottom left of page//
 $("#main").append(internationalizeButton);
+	
+//Appends the google map to the map div//
 $("#mapDiv").append(googleMap);
-	
-	
-	
-	
+
