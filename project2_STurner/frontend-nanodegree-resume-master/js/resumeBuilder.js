@@ -93,7 +93,7 @@ var education = {
 	"displayOnline": function(){
 		if (education.onlineCourses.length > 0){
 			$("#education").append(HTMLonlineClasses);
-		
+			
 			for(crse in education.onlineCourses){
 				$("#education").append(HTMLschoolStart);
 				var formattedonlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[crse].title);
@@ -164,12 +164,14 @@ var work = {
 			{
 			"title": "Billing Consolidator: SToNC",
 			"dates": "June 2014 - October 2014",
-			"description": "Customize the invoice output to meet the Business Requirements for all AT&T products for the State of North Carolina."
+			"description": "Customize the invoice output to meet the Business Requirements for all AT&T products for the State of North Carolina.",
+			"pic":"http://placehold.it/250x150"
 			},
 			{
 			"title": "Document  Access Provisioning process",
 			"dates": "March 2014 - May 2014",
-			"description": "Create a Desk Level Procedure that describes the user provisioning process for the Billing Consolidator."
+			"description": "Create a Desk Level Procedure that describes the user provisioning process for the Billing Consolidator.",
+			"pic":"http://placehold.it/250x150"
 			}
 		],
 		"display": function(){
@@ -183,7 +185,7 @@ var work = {
 					$(".project-entry:last").append(formattedTitleDate);
 					var formattedDescription = HTMLprojectDescription.replace("%data%",workProjects.project[itm].description);
 					$(".project-entry:last").append(formattedDescription);
-					var formattedImage = HTMLprojectImage.replace("%data%",workProjects.project[itm].image);
+					var formattedImage = HTMLprojectImage.replace("%data%",workProjects.project[itm].pic);
 					$(".project-entry:last").append(formattedImage);
 				}//Ends for loop
 			}//Ends if statement
@@ -217,4 +219,3 @@ $("#main").append(internationalizeButton);
 	
 //Appends the google map to the map div//
 $("#mapDiv").append(googleMap);
-
