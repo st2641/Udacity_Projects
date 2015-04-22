@@ -89,6 +89,7 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
+  word-wrap: normal;
 }
 
 .orange {
@@ -123,8 +124,8 @@ a {
   display: -webkit-flex;
   display: flex;
   display: flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: normal;
+  /*--justify-content: space-around;*/
   padding: 10px;
 }
 
@@ -212,4 +213,25 @@ span {
   .biopic {
     display: block;
   }
+}
+/*-----------------------------*/
+.accordion__container {
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.accordion__tab {
+    background: #aaa;
+    color: #fff;
+    border-bottom: 1px solid white;
+}
+.accordion__tab-title {
+    background: #C0C0C0;
+    padding: 5px;
+    cursor: pointer;
+}
+.accordion__tab-content {
+    background: #999;
+     padding-left: 5%;
+  padding-right: 5%;
 }
