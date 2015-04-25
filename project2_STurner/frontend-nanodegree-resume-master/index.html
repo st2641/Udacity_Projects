@@ -38,8 +38,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/accordion.js"></script>
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
@@ -58,26 +56,17 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
-	<div id="header" class='center-content clearfix''>
+	<div id="header" class='center-content clearfix'>
 	  <ul id="topContacts" class='flex-box'></ul>
 	</div>
     <div style='clear: both;'></div>
 	
-	
-	
-	<div id="workExperience" class='gray accordion__container' ng-controller='myCtrl'>
-		<div class='accordion__tab'>
-			<div class='accordion__tab-title' ng-click='openTab'>
-				<h2>Work Experience</h2>
-			</div>
-			<div class='accordion__tab-content' ng-show="isOpenTab"></div>
-		</div>
+	<div id="workExperience" class='gray'>
+	<h2>Work Experience</h2>
 	</div>
-
-	
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
+	<div id="projects">
+		<h2>Projects</h2>
+	</div>
     <div id="education" class='gray'>
       <h2>Education</h2>
     </div>
@@ -86,7 +75,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="letsConnect" class='dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
+        <ul id="footerContacts" class='flex-box'>
       </ul>
     </div>
   </div>
